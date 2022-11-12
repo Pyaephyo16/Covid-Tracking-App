@@ -16,12 +16,21 @@ CovidModelImpl covidModel = CovidModelImpl();
 
   CountryBloc(){
 
-    //Get CountryList
-    covidModel.getCountry().then((value){
+    // //Get CountryList
+    // covidModel.getCountry().then((value){
+    //     countryList = value;  
+    //     print("filter list lenght => ${countryList?.length} ${countryList?.first.country}");
+    //     notifySafely();
+    // }).catchError((error){
+    //   print("country list bloc error ${error.toString()}");
+    // });
+
+        //Get CountryList from database
+    covidModel.getAllCountriesFromDatabase().listen((value){
         countryList = value;  
         print("filter list lenght => ${countryList?.length} ${countryList?.first.country}");
         notifySafely();
-    }).catchError((error){
+    }).onError((error){
       print("country list bloc error ${error.toString()}");
     });
 

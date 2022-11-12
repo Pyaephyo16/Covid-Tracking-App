@@ -16,7 +16,7 @@ class CountryPage extends StatelessWidget {
             backgroundColor: Colors.orange,
             leading: IconButton(
               onPressed: (){Navigator.pop(context);},
-              icon:const Icon(Icons.arrow_back_ios_rounded,size: 28,color: Colors.black,),
+              icon:const Icon(Icons.arrow_back_ios_rounded,size: 20,color: Colors.black,),
             ),
             title: const TitleTextView(text: "Select Country", color: Colors.black),
           ),
@@ -120,7 +120,7 @@ class SearchCountryTextFieldView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16,vertical: 8),
+      padding:const EdgeInsets.symmetric(horizontal: 24,vertical: 8),
       height: MediaQuery.of(context).size.height * 0.1,
       decoration: BoxDecoration(
         color: Colors.white,

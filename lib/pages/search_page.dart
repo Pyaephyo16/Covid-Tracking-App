@@ -21,7 +21,7 @@ class SearchPage extends StatelessWidget {
           backgroundColor: Colors.orange,
           leading: IconButton(
             onPressed: (){Navigator.pop(context);},
-            icon:const Icon(Icons.arrow_back_ios_rounded,size: 28,color: Colors.black,),
+            icon:const Icon(Icons.arrow_back_ios_rounded,size: 20,color: Colors.black,),
           ),
           title: const TitleTextView(text: "Covid Tracking By Country", color: Colors.black),
         ),
